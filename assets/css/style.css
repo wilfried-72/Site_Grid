@@ -180,7 +180,7 @@ li {
   width: 100%;
   height: auto;
   grid-template-columns: 20% 20% 10% 10% 20% 20%;
-  grid-template-rows: 7vh 200px 1fr 50px;
+  grid-template-rows: 7vh 200px 1fr 1fr 1fr 50px;
   grid-template-areas:
     "nav nav nav nav nav nav"
     "img img img img img img"
