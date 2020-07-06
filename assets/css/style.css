@@ -6,7 +6,7 @@
  * Created: Wil 
  ******************************/
 
- /* Text-color */
+/* Text-color */
 /* ************************************************** */
 .txt-green {
   color: green
@@ -116,53 +116,57 @@
   background-color: rosybrown
 }
 
+.bg-head {
+  width: 100%;
+  height: auto;
+  background-image: url(../images/header.jpeg);
+  background-position: center;
+  /* adapte l'image à l'ecran */
+  background-size: cover;
+}
+
 /* / Background */
 /* ************************************************** */
 
 
 
+
+/* Body*/
+/* ************************************************** */
 body {
   padding: 0;
   margin: 0;
   width: 100%;
-  height:auto;
+  height: auto;
 }
+/* / Body*/
+/* ************************************************** 
 
-li {
-  list-style: none;
+
+
+
+/* Padding */
+/* ************************************************** */
+.pd-5 {
+  padding: 5px 5px 5px 5px;
 }
+/* / Padding*/
+/* ************************************************** */
 
-/* Flex*/
-.row {
-  display: flex;
-}
 
-.col {
-  display: flex;
-  flex-direction: column;
-}
 
-/* Card */
-.item {
-  padding: 5px;
-  margin: 5px;
-}
 
-/* Grid Area */
+/* Structure Grid Area */
+/* *************************************************************************************************** */
 
+/* principale de la page
+# correspond à un id / . correrspond à une classe
+***************** */
 #grid>header {
   grid-area: head;
 }
 
-#grid>nav {
-  grid-area: nav;
-}
-
-#grid>.img {
-  grid-area: img;
-}
-
-#grid>.actu {
+#grid>#actu {
   grid-area: actu;
 }
 
@@ -170,45 +174,237 @@ li {
   grid-area: form;
 }
 
-#grid>footer {
-  grid-area: foot;
-}
-
-
 #grid {
   display: grid;
   width: 100%;
   height: auto;
   grid-template-columns: 20% 20% 10% 10% 20% 20%;
-  grid-template-rows: 7vh 200px 1fr 1fr 1fr 50px;
+  grid-auto-rows: auto;
+  /* grid-template-rows: 1fr 1fr; */
   grid-template-areas:
-    "nav nav nav nav nav nav"
-    "img img img img img img"
     "head head head head head head"
     "actu actu actu actu actu actu"
     "form form form form form form"
-    "foot foot foot foot foot foot";
-}
-
-header>h1 {
-  grid-area: t-wel
-}
-
-#grid>header {
-  text-align: center;
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: ". . ."
-    " . t-wel . "
-    " . . . "
   ;
 }
 
+/* / principale
+***************** */
 
-nav>h2 {
+/* header
+******************************************************************** */
+header>h1 {
+  text-align: center;
+  grid-area: t-header;
+}
+
+header>h3 {
+  text-align: justify;
+  grid-area: histo;
+}
+
+#grid>header {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 10% 80% 10%;
+  grid-auto-rows: auto;
+  /* grid-template-rows: 100px 100px; */
+  grid-template-areas:
+    " . t-header  . "
+    " . histo . "
+  ;
+}
+/* / header
+********************************************************************** */
+
+
+/* Actu
+********************************************************************** */
+
+/* Actu title
+****************** */
+#actu>.actu-title>h1 {
+  text-align: center;
+  grid-area: t-actu;
+}
+
+#grid>#actu>.actu-title {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 5% 30% 30% 30% 5%;
+  grid-auto-rows: auto;
+  /* grid-template-rows: 1fr; */
+  grid-template-areas:
+    ". . t-actu . ."
+  ;
+}
+/* / Actu title
+****************** */
+
+
+
+/* Actu Card
+****************** */
+#actu>.actu-card>.card-a {
+   grid-area: a;
+}
+
+#actu>.actu-card>.card-b {
+  grid-area: b;
+}
+
+#actu>.actu-card>.card-c {
+  grid-area: c;
+}
+
+#grid>#actu>.actu-card {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-column-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  /* grid-template-rows: 1fr; */
+  grid-template-areas:
+    "a b c"
+  ;
+}
+
+#actu>.actu-card>.card>img {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  grid-area: img;
+}
+
+#actu>.actu-card>.card>h2 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  grid-area: title;
+}
+
+#actu>.actu-card>.card>h3 {
+  width: 100%;
+  height: auto;
+  text-align: start;
+  grid-area: desc;
+}
+
+#actu>.actu-card>.card>h4 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  grid-area: date;
+}
+
+#grid>#actu>.actu-card>.card {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-column-gap: 5px;
+  grid-template-columns: 10px 1fr 1fr 1fr 10px;
+  grid-row-gap: 5px;
+  /* grid-auto-rows: auto; */
+  grid-template-rows: 1fr 160px 320px 70px;
+  grid-template-areas:
+    " . img img img ."
+    ". title . . . "
+    ". . desc . ."
+    " . . . date ."
+    ;
+}
+/* / Actu Card
+****************** */
+/* / Actu
+*********************************************************************** */
+
+
+/* Form
+*********************************************************************** */
+form>.form-title>h1 {
+  text-align: center;
+  grid-area: t-form;
+}
+
+#grid>form>.form-title{
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-column-gap: 5px;
+  grid-template-columns: 10% 20% 20% 20% 20% 10%;
+  grid-auto-rows: auto;
+  /* grid-template-rows: 1fr 1fr 1fr 2fr 1fr; */
+  grid-template-areas: ". . t-form t-form . ."
+  ; 
+}
+
+form>.form-frame>.name {
+  text-align: end;
+  grid-area: in-name;
+}
+
+form>.form-frame>.mail {
+  text-align: start;
+  grid-area: in-mail;
+}
+
+form>.form-frame>.sujet {
+  text-align: center;
+  grid-area: t-suj;
+}
+
+form>.form-frame>.comment {
+  text-align: start;
+  grid-area: t-text;
+}
+
+form>.form-frame>.btn {
+  text-align: start;
+  grid-area: t-btn;
+}
+
+#grid>form>.form-frame {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-column-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* grid-auto-rows: auto; */
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    ". . in-name  in-mail . ."
+    ". . t-suj t-suj . ."
+    ". . t-text t-text . ."
+    ". . . . t-btn ."
+  ; 
+}     
+/* / Form
+*********************************************************************** *
+
+
+
+
+
+
+
+
+/* / Grid Area */
+/* **************************************************************************************************** */
+
+
+
+
+/*
+
+li {
+  list-style: none;
+}  */
+
+
+/* nav>h2 {
   grid-area: t-nav;
 }
 
@@ -226,64 +422,28 @@ nav>ul {
   ;
 }
 
-form>h3 {
-  grid-area: t-form
+
+
+/* Flex*/
+/* .row {
+  display: flex;
 }
 
-form>.name {
-  grid-area: in-name
-}
-
-form>.mail {
-  grid-area: in-mail
-}
-
-form>input {
-  grid-area: t-suj
-}
-
-form>textarea {
-  grid-area: t-text
-}
-
-form>button {
-  grid-area: t-btn
-}
-
-#grid>form {
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-template-columns: 10% 20% 20% 20% 20% 10%;
-  grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
-  grid-template-areas: ". . t-form t-form . ."
-    ". . in-name  in-mail . ."
-    ". . t-suj t-suj . ."
-    ". . t-text t-text . ."
-    ". . t-btn t-btn . ."
-  ;
-}
-
-#grid>.img {
-  display: grid;
-  width: 100%;
-  height: auto;
-}
+.col {
+  display: flex;
+  flex-direction: column;
+} */
 
 
 
-#grid>.actu {
-  display: grid;
-  width: 100%;
-  height: auto;
+/* #grid>nav {
+  grid-area: nav;
 }
 
 
 
 
 
-
-
-
-
-
+#grid>footer {
+  grid-area: foot;
+} */
