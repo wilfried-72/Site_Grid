@@ -46,40 +46,42 @@
 
 
 
-    <section id="actu">
+    <section id="actu" class="bg-purple">
 
-      <div class="actu-title">
-        <h1>Actualités</h1>
+      <h1 class="br-black ">Actualités</h1>
+
+
+
+      <div class="br-black card card-a">
+
+        <img src="./assets/images/episode4.jpeg" alt="episode4">
+        <h2>Star Wars, épisode IV :<br> Un nouvel espoir</h2>
+        <h3>C'est le premier opus de la saga Star Wars par sa date de sortie, mais le
+          quatrième selon l'ordre de l'histoire. Il est le premier volet de la trilogie originale qui
+          est constituée également des films L'Empire contre-attaque et Le Retour du Jedi. </h3>
+        <h4>Année de sortie 1977</h4>
+
       </div>
 
-      <div class="actu-card">
+      <div class="br-black card card-b ">
 
-        <div class="br-black bg-purple card card-a">
-          <img src="./assets/images/episode4.jpeg" alt="episode4">
-          <h2 class="br-black bg-white">Star Wars, épisode IV :<br> Un nouvel espoir</h2>
-          <h3 class="br-black bg-white">C'est le premier opus de la saga Star Wars par sa date de sortie, mais le
-            quatrième selon l'ordre chronologique de l'histoire. Il est le premier volet de la trilogie originale qui
-            est constituée également des films L'Empire contre-attaque et Le Retour du Jedi. </h3>
-          <h4 class="br-black bg-white">Année de sortie 1977</h4>
-        </div>
+        <img src="./assets/images/episode5.jpeg" alt="episode5">
+        <h2>Star Wars, épisode V :<br> L'Empire contre-attaque</h2>
+        <h3>C'est le deuxième opus de la saga Star Wars par sa date de sortie, mais le
+          cinquième selon l'ordre de l'histoire. Il est le deuxième volet de la trilogie originale qui
+          est constituée également des films Un nouvel espoir et Le Retour du Jedi.</h3>
+        <h4>Année de sortie 1980</h4>
 
-        <div class="br-black bg-purple card card-b ">
-          <img src="./assets/images/episode5.jpeg" alt="episode5">
-          <h2 class="br-black bg-white">Star Wars, épisode V :<br> L'Empire contre-attaque</h2>
-          <h3 class="br-black bg-white">C'est le deuxième opus de la saga Star Wars par sa date de sortie, mais le
-            cinquième selon l'ordre chronologique de l'histoire. Il est le deuxième volet de la trilogie originale qui
-            est constituée également des films Un nouvel espoir et Le Retour du Jedi.</h3>
-          <h4 class="br-black bg-white">Année de sortie 1980</h4>
-        </div>
+      </div>
 
-        <div class=" br-black bg-purple card card-c">
-          <img src="./assets/images/episode6.jpeg" alt="episode6">
-          <h2 class="br-black bg-white">Star Wars, épisode VI :<br> Le Retour du Jedi</h2>
-          <h3 class="br-black bg-white">C'est le troisième opus de la saga Star Wars par sa date de sortie, mais le
-            sixième selon l'ordre chronologique de l'histoire. Il est le dernier volet de la trilogie originale qui est
-            constituée également des films Un nouvel espoir et L'Empire contre-attaque.</h3>
-          <h4 class="br-black bg-white">Année de sortie 1983</h4>
-        </div>
+      <div class="br-black card card-c">
+
+        <img src="./assets/images/episode6.jpeg" alt="episode6">
+        <h2>Star Wars, épisode VI :<br> Le Retour du Jedi</h2>
+        <h3>C'est le troisième opus de la saga Star Wars par sa date de sortie, mais le
+          sixième selon l'ordre de l'histoire. Il est le dernier volet de la trilogie originale qui est
+          constituée également des films Un nouvel espoir et L'Empire contre-attaque.</h3>
+        <h4>Année de sortie 1983</h4>
 
       </div>
 
@@ -90,36 +92,31 @@
 
     <form class="bg-green">
 
-      <div class="form-title">
-        <h1 class="br-blue">Formulaire</h1>
+
+      <h1 class="br-blue">Formulaire</h1>
+
+      <div class="name">
+        <label>Name:</label>
+        <input class="ratio" type="text" id="name" placeholder="Name">
       </div>
 
-
-      <div class="form-frame br-blue">
-
-        <div class="name">
-          <label>Name:</label>
-          <input type="text" id="name" placeholder="Name">
-        </div>
-
-        <div class="mail">
-          <label>Mail:</label>
-          <input type="email" id="email" placeholder="Email">
-        </div>
-
-        <div class="sujet">
-          <label>Sujet:</label>
-          <input type="text" id="subject" placeholder="Sujet">
-        </div>
-
-        <div class="comment">
-          <label>Commentaire:</label>
-          <textarea name="comment" id="comment" cols="60" rows="4"></textarea>
-                  </div>
-
-        <button class="btn">Envoyer</button>
-
+      <div class="mail">
+        <label class="ratio" for="">Mail:</label>
+        <input class="ratio" type="email" id="email" placeholder="Email">
+        <!-- <input type="email" id="email" placeholder="Email" style="width:100px;"> -->
       </div>
+
+      <div class="sujet">
+        <label class="ratio" for="">Sujet:</label>
+        <input class="ratio" type="text" id="subject" placeholder="Sujet">
+      </div>
+
+      <div class="comment">
+        <label class="ratio" for="">Commentaire:</label>
+        <textarea class="ratio" name="comment" id="comment" cols="60" rows="5"></textarea>
+      </div>
+
+      <button class="btn">Envoyer</button>
 
   </div>
 
