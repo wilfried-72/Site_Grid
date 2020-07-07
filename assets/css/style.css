@@ -217,7 +217,7 @@ li {
 .row {
   display: flex;
   flex-direction: row;
-  flex-flow: row wrap;
+  align-items: center;
 }
 
 .item {
@@ -231,7 +231,7 @@ nav>img {
   grid-area: nav-logo;
 }
 
-nav>h2 {
+nav>h1 {
   grid-area: t-nav;
 }
 
@@ -551,31 +551,27 @@ footer>.social {
 
 
 
-/*  responsive */
+/*  responsive 620 à 640 */
 /* **************************************************************************************************** */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 620px) {
 
-  h1,
-  h2,
-  h3,
-  .h3-1,
-  .h3-2,
-  .h3-3 {
-    width: 60%;
+  nav>img {
+    width: 100%;
+    height: auto;
+    grid-area: nav-logo;
   }
 
-  #grid>footer {
+  #grid>nav {
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 5% 30% 30% 30% 5%;
-    grid-row-gap: 5px;
+    grid-template-columns: 30% 1fr;
     grid-auto-rows: auto;
     grid-template-areas:
-      ". t-foo t-foo t-foo ."
-      ". part-a part-a part-a ."
-      ". part-b part-b part-b ."
-      ". part-c part-c part-c .";
+      "nav-logo"
+      "t-nav"
+      "ul-nav"
+    ;
   }
 
 
@@ -594,6 +590,42 @@ footer>.social {
       ". c c c .";
   }
 
+
+  #grid>footer {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-row-gap: 5px;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      ". t-foo t-foo t-foo ."
+      ". part-a part-a part-a ."
+      ". part-b part-b part-b ."
+      ". part-c part-c part-c .";
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 250px) {
+
+  h1,
+  h2,
+  h3,
+  .h3-1,
+  .h3-2,
+  .h3-3 {
+    align-self: center;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    width: 60%;
+  }
+
+
+
   nav>img {
     width: 100%;
     height: auto;
@@ -607,10 +639,44 @@ footer>.social {
     grid-template-columns: 30% 1fr;
     grid-auto-rows: auto;
     grid-template-areas:
-      "nav-logo t-nav "
-      "ul-nav ."
+      "nav-logo"
+      "t-nav"
+      "ul-nav"
     ;
   }
+
+  #grid>#actu {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-row-gap: 5px;
+    grid-auto-rows: auto;
+    /* grid-template-rows: 1fr; */
+    grid-template-areas:
+      ". t-actu t-actu t-actu ."
+      ". a a a ."
+      ". b b b ."
+      ". c c c .";
+  }
+
+  #grid>footer {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: 5px;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "t-foo"
+      "part-a"
+      "part-b"
+      "part-c";
+  }
+
+
+
+
 
 }
 
