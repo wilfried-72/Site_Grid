@@ -556,7 +556,7 @@ footer>.social {
 @media screen and (max-width: 620px) {
 
   nav>img {
-    width: 100%;
+    width: 20%;
     height: auto;
     grid-area: nav-logo;
   }
@@ -565,7 +565,7 @@ footer>.social {
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: auto;
     grid-auto-rows: auto;
     grid-template-areas:
       "nav-logo"
@@ -605,8 +605,6 @@ footer>.social {
       ". part-c part-c part-c .";
   }
 
-
-
 }
 
 
@@ -627,7 +625,7 @@ footer>.social {
 
 
   nav>img {
-    width: 100%;
+    width: 20%;
     height: auto;
     grid-area: nav-logo;
   }
@@ -636,7 +634,7 @@ footer>.social {
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: auto;
     grid-auto-rows: auto;
     grid-template-areas:
       "nav-logo"
@@ -649,7 +647,7 @@ footer>.social {
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-columns: auto;
     grid-row-gap: 5px;
     grid-auto-rows: auto;
     /* grid-template-rows: 1fr; */
@@ -664,7 +662,7 @@ footer>.social {
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-row-gap: 5px;
     grid-auto-rows: auto;
     grid-template-areas:
@@ -673,10 +671,6 @@ footer>.social {
       "part-b"
       "part-c";
   }
-
-
-
-
 
 }
 
